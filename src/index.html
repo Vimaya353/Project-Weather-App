@@ -6,10 +6,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
 </head>
+
 <body>
-  <div id="content">
-    <h1>Weather App</h1>
-    <p>Your weather forecast starts here.</p>
-  </div>
+  <main class="weather-app">
+
+    <header>
+      <h1>Weather App</h1>
+      <p>Check the weather anywhere in the world.</p>
+    </header>
+
+    <!-- Search for a city -->
+    <form id="search-form">
+      <input
+        type="text"
+        id="location-input"
+        placeholder="Enter a city, e.g. Colombo"
+        aria-label="Search for a city"
+        required
+      >
+
+      <button type="submit">Search</button>
+    </form>
+
+    <!-- Switch between Celsius and Fahrenheit -->
+    <div class="temperature-toggle">
+      <button
+        type="button"
+        id="celsius-btn"
+        class="active"
+      >
+        °C
+      </button>
+
+      <button
+        type="button"
+        id="fahrenheit-btn"
+      >
+        °F
+      </button>
+    </div>
+
+    <!-- Loading messages and errors appear here -->
+    <p id="status" role="status" aria-live="polite"></p>
+
+    <!-- Current weather and forecast appear here -->
+    <section id="weather-display" aria-live="polite">
+      <p>Search for a city to see its weather.</p>
+    </section>
+
+  </main>
 </body>
 </html>
